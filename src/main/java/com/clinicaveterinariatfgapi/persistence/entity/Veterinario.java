@@ -1,10 +1,7 @@
 package com.clinicaveterinariatfgapi.persistence.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +9,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Table(name = "veterinarios")
 @Entity
@@ -21,7 +19,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class Veterinario implements Serializable {
     private final Long serialVersionUID = 1L;
-
 
     /* ============= ENTITIES  ============= */
     @Id
@@ -42,4 +39,6 @@ public class Veterinario implements Serializable {
 
 
     /* ============= RELATIONS ============= */
+    @OneToMany(mappedBy = "veterinario")
+    List<Cita> citas;
 }

@@ -1,15 +1,13 @@
 package com.clinicaveterinariatfgapi.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Table(name = "mascotas")
 @Entity
@@ -35,4 +33,11 @@ public class Mascota implements Serializable {
     private String cliDni;
 
     /* ============= RELATIONS ============= */
+    @ManyToOne
+    @JoinColumn(name = "cli_dni",insertable = false, updatable = false)
+    private Cliente cliente;
+
+
+    @OneToMany(mappedBy = "mascota")
+    private List<Cita> citas;
 }
