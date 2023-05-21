@@ -1,10 +1,8 @@
 package com.clinicaveterinariatfgapi.persistence.entity;
 
+import ch.qos.logback.core.net.server.Client;
 import com.fasterxml.jackson.databind.DatabindException;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,5 +36,16 @@ public class Cita implements Serializable {
     private String mascChip;
 
     /* ============= RELATIONS ============= */
+    @ManyToOne
+    @JoinColumn(name = "cli_dni",insertable = false, updatable = false)
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "vet_dni", insertable = false, updatable = false)
+    private Veterinario veterinario;
+
+    @ManyToOne
+    @JoinColumn(name = "masc_chip", insertable = false, updatable = false)
+    private Mascota mascota;
 
 }
