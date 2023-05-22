@@ -14,7 +14,7 @@ public interface VeterinarioDTORepository {
     List<VeterinarioDTO> getAll();
     Optional<VeterinarioDTO> getById(String id);
 
-    void update(VeterinarioDTO dto, String id);
+    VeterinarioDTO update(VeterinarioDTO dto, String id);
 
     boolean delete(String id);
 }

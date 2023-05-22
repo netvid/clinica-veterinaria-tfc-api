@@ -15,7 +15,7 @@ public interface MascotaDTORepository {
 
     Optional<MascotaDTO> getById(String id);
 
-    void update(MascotaDTO dto, String id);
+    MascotaDTO update(MascotaDTO dto, String id);
 
     boolean delete(String id);
 }
