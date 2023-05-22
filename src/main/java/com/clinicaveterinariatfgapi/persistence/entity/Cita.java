@@ -17,7 +17,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cita implements Serializable {
-    private final Long serialVersionUID = 1L;
+    private static final Long serialVersionUID = 1L;
     /* ============= ENTITIES  ============= */
     @Id
     @Column(name = "cita_id")

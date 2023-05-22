@@ -12,7 +12,7 @@ public interface ClienteDTORepository {
     List<ClienteDTO> getAll();
     Optional<ClienteDTO> getById(String id);
 
-    void update(ClienteDTO dto, String id);
+    ClienteDTO update(ClienteDTO dto, String id);
 
     boolean delete(String id);
 }

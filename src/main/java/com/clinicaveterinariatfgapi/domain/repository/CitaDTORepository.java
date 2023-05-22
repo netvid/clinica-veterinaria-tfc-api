@@ -14,7 +14,7 @@ public interface CitaDTORepository {
     List<CitaDTO> getAll();
     Optional<CitaDTO> getById(Long id);
 
-    void update(CitaDTO dto, Long id);
+    CitaDTO update(CitaDTO dto, Long id);
 
     boolean delete(Long id);
 }
