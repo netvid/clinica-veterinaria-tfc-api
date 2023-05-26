@@ -14,13 +14,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CitaDTO {
     private Long id;
-
     private String fecha;
     private String dniCliente;
     private String dniVeterinario;
     private String chipMascota;
 
-    private ClienteDTO cliente;
-    private VeterinarioDTO veterinario;
-    private MascotaDTO mascota;
 }

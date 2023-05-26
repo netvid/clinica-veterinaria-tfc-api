@@ -17,8 +17,5 @@ public class MascotaDTO {
     private String tipo;
     private String raza;
     private String dniCliente;
-
-    private ClienteDTO cliente;
-
     private List<CitaDTO> citas;
 }

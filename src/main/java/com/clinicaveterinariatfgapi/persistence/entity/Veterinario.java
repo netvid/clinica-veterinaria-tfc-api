@@ -39,6 +39,6 @@ public class Veterinario implements Serializable {
 
 
     /* ============= RELATIONS ============= */
-    @OneToMany(mappedBy = "veterinario")
+    @OneToMany(mappedBy = "veterinario", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
     List<Cita> citas;
 }

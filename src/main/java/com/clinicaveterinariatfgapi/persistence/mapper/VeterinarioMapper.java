@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring",uses = {CitaMapper.class})
 public interface VeterinarioMapper {
     @Mappings({
             @Mapping(source = "vetDni",target = "dni"),

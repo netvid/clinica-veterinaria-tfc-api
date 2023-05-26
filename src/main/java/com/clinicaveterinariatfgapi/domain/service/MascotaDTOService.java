@@ -46,7 +46,6 @@ public class MascotaDTOService implements MascotaDTORepository {
         dtoToSave.setRaza(dto.getRaza());
         dtoToSave.setCitas(dto.getCitas());
         dtoToSave.setTipo(dto.getTipo());
-        dtoToSave.setDniCliente(dto.getDniCliente());
 
         Mascota mascota = mapper.toMascota(dtoToSave);
         return mapper.toMascotaDTO(mascotaCrudRepository.save(mascota));

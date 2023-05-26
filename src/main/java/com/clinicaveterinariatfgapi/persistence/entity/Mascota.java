@@ -1,5 +1,7 @@
 package com.clinicaveterinariatfgapi.persistence.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Mascota implements Serializable {
-    private static final Long serialVersionUID = 1L;
+    //private static final Long serialVersionUID = 1L;
 
     /* ============= ENTITIES  ============= */
     @Id
@@ -35,6 +37,7 @@ public class Mascota implements Serializable {
     /* ============= RELATIONS ============= */
     @ManyToOne
     @JoinColumn(name = "cli_dni",insertable = false, updatable = false)
+    @JsonBackReference
     private Cliente cliente;
 
 

@@ -15,10 +15,11 @@ public interface CitaMapper {
 
     @Mappings({
             @Mapping(source = "citaId" , target = "id"),
-            @Mapping(source = "cliDni", target = "dniCliente"),
             @Mapping(source = "citaFecha",target = "fecha"),
+            @Mapping(source = "cliDni", target = "dniCliente"),
             @Mapping(source = "vetDni", target = "dniVeterinario"),
             @Mapping(source = "mascChip", target = "chipMascota")
+
     })
     CitaDTO toCitaDTO(Cita cita);
 

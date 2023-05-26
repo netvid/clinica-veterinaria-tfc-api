@@ -42,13 +42,6 @@ public class CitaDTOService implements CitaDTORepository {
     public CitaDTO update(CitaDTO dto, Long id) {
         CitaDTO citaToSave = getById(id).get();
         citaToSave.setFecha(dto.getFecha());
-        citaToSave.setCliente(dto.getCliente());
-        citaToSave.setMascota(dto.getMascota());
-        citaToSave.setVeterinario(dto.getVeterinario());
-        citaToSave.setChipMascota(dto.getChipMascota());
-        citaToSave.setDniCliente(dto.getDniCliente());
-        citaToSave.setDniVeterinario(dto.getDniVeterinario());
-
         Cita cita = mapper.toCita(citaToSave);
 
         return mapper.toCitaDTO(citaCrudRepository.save(cita));

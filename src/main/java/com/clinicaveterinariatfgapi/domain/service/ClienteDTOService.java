@@ -26,6 +26,10 @@ public class ClienteDTOService implements ClienteDTORepository {
         return mapper.toClienteDTO(clienteCrudRepository.save(cliente));
     }
 
+    public List<Cliente> getAllNo(){
+        return (List<Cliente>) clienteCrudRepository.findAll();
+    }
+
     @Override
     public List<ClienteDTO> getAll() {
         return mapper.toClientesDTO((List<Cliente>)clienteCrudRepository.findAll());

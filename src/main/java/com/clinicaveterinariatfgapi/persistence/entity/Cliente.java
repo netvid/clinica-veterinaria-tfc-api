@@ -7,14 +7,14 @@ import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 
-@Table(name = "clientes")
+
 @Entity
+@Table(name = "clientes")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente implements Serializable {
-    private static final Long serialVersionUID = 1L;
 
     /* ============= ENTITIES  ============= */
     @Id
@@ -32,9 +32,9 @@ public class Cliente implements Serializable {
 
 
     /* ============= RELATIONS ============= */
-    @OneToMany(mappedBy = "cliente")
-    private List<Mascota> mascotas;
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
+    List<Mascota> mascotas;
 
-    @OneToMany(mappedBy = "cliente")
-    private List<Cita> citas;
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    List<Cita> citas;
 }

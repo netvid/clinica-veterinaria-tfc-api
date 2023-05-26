@@ -61,7 +61,7 @@
 			<artifactId>mapstruct-processor</artifactId>
 			<version>1.5.4.Final</version>
 		</dependency>
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

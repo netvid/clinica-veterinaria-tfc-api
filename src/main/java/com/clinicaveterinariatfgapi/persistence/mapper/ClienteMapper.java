@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {MascotaMapper.class,CitaMapper.class})
 public interface ClienteMapper {
 
     @Mappings({
