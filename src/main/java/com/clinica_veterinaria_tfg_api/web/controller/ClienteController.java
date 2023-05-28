@@ -2,6 +2,7 @@ package com.clinica_veterinaria_tfg_api.web.controller;
 
 import com.clinica_veterinaria_tfg_api.domain.dto.ClienteDTO;
 import com.clinica_veterinaria_tfg_api.domain.service.ClienteDTOService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +31,7 @@ public class ClienteController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<ClienteDTO> save(@RequestBody ClienteDTO dto){
+    public ResponseEntity<ClienteDTO> save(@Valid @RequestBody ClienteDTO dto){
         return new ResponseEntity<>(service.save(dto), HttpStatus.CREATED);
     }
 

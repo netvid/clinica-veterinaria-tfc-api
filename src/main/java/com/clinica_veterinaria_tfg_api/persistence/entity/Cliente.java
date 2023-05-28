@@ -1,6 +1,7 @@
 package com.clinica_veterinaria_tfg_api.persistence.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.io.Serializable;
@@ -19,6 +20,7 @@ public class Cliente implements Serializable {
     /* ============= ENTITIES  ============= */
     @Id
     @Column(name = "cli_dni")
+    @Size(min = 9, max = 9, message = "The id must be contains 9 characters")
     private String cliDni;
 
     @Column(name = "cli_nombre")

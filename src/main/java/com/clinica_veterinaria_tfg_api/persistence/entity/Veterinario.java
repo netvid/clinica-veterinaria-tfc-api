@@ -2,6 +2,7 @@ package com.clinica_veterinaria_tfg_api.persistence.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class Veterinario implements Serializable {
     /* ============= ENTITIES  ============= */
     @Id
     @Column(name = "vet_dni")
+    @Size(min = 9, max = 9, message = "The id must be contains 9 characters")
     private String vetDni;
 
     @Column(name = "vet_nombre")
