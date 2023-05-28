@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "411f4513-63fe-4c89-8145-626dd6574019",
+		"name": "clinica-veterinaria-tfc-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26756340"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "GET All Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clients/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clients",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Cliente by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clients/11122233A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clients",
+								"11122233A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"27750377B\",\r\n    \"nombre\": \"Margarita\",\r\n    \"apellidos\": \"Ruiz\",\r\n    \"fechaNac\": \"1975-05-24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clients/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clients",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Cliente by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clients/77522399A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clients",
+								"77522399A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Javier\",\r\n    \"apellidos\": \"Limon\",\r\n    \"fechaNac\": \"1993-05-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clients/11122233A/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clients",
+								"11122233A",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mascotas",
+			"item": [
+				{
+					"name": "GET All Mascotas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pets/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pets",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Mascota By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pets/9rhjbquo0x",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pets",
+								"9rhjbquo0x"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE Mascota",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chip\": \"890kbqks\",\r\n    \"nombre\": \"colon\",\r\n    \"tipo\": \"gato\",\r\n    \"raza\": \"persa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pets/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pets",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Mascota",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jira\",\r\n    \"tipo\": \"gato\",\r\n    \"raza\": \"persa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pets/890kbqks/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pets",
+								"890kbqks",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Mascota By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pets/890kbqks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pets",
+								"890kbqks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "veterinarios",
+			"item": [
+				{
+					"name": "GET All Veterinarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/veterinaries/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"veterinaries",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Veterinarie by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/veterinaries/12345678D",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"veterinaries",
+								"12345678D"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE Veterinarian",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"88122455A\",\r\n    \"nombre\": \"Paco\",\r\n    \"apellidos\": \"Sanchez Ruiz\",\r\n    \"sector\": \"Odontologia\",\r\n    \"fechaNac\": \"1985-02-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/veterinaries/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"veterinaries",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Veterinario by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/veterinaries/88122455A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"veterinaries",
+								"88122455A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Veterinario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Paco\",\r\n    \"apellidos\": \"Sancez Gonzalez\",\r\n    \"sector\": \"Odontologia\",\r\n    \"fechaNac\": \"1955-02-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/veterinaries/88122455A/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"veterinaries",
+								"88122455A",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "citas",
+			"item": [
+				{
+					"name": "GET All Citas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cites/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cites",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Cita By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cites/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cites",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE Cita",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha\": \"15 Junio 2023 15:15\",\r\n    \"dniCliente\": \"11122233B\",\r\n    \"dniVeterinario\": \"12345678B\",\r\n    \"chipMascota\": \"9rhjbquo0x\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cites/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cites",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Cita by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cites/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cites",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Cita",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha\": \"12-jun-2023 12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cites/5/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cites",
+								"5",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/clinica-tfg/api",
+			"type": "string"
+		}
+	]
+}
