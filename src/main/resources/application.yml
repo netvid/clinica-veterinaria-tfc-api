@@ -1,7 +1,15 @@
+server:
+  servlet:
+    context-path: /clinica-tfg/api
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/clinica-veterinaria-tfg
     username: postgres
     password: toor
+springdoc:
+  swagger-ui:
+    enabled: true
+  api-docs:
+    enabled: true
 
 

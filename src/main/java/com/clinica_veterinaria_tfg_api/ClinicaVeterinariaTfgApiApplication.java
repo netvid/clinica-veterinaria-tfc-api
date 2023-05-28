@@ -1,4 +1,4 @@
-package com.clinicaveterinariatfgapi;
+package com.clinica_veterinaria_tfg_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
